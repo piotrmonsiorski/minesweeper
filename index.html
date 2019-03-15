@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=latin-ext" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+
+        <title>Minesweeper</title>
+    </head>
+
+    <body>
+        
+        <div class="game">
+            <div class="board-container">
+                <div class="panel">
+                    <div class="bombs">
+                        <h6>bombs left</h6>
+                        <h2></h2>
+                    </div>
+                    <div class="head"></div>
+                    <div class="timer">
+                        <h6>time</h6>
+                        <h2></h2>
+                    </div>
+                </div>
+                <div class="board"></div>
+                <div class="result">
+                    <h2></h2>
+                </div>
+                <div class="resize">
+                    <h5>change board size</h5>
+                    <div class="inputs">
+                        <input type="number" placeholder="rows" id="rows">
+                        <input type="number" placeholder="colums" id="cols">
+                        <input type="number" placeholder="bombs" id="bombs">
+                    </div>
+                    <button>change size and reset game</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/game.js"></script>
+    </body>
+</html>

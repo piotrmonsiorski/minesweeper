@@ -1,0 +1,164 @@
+@mixin border-outer {
+    border-top: 3px solid #fff;
+    border-left: 3px solid #fff;
+    border-right: 3px solid #aaa;
+    border-bottom: 3px solid #aaa;
+}
+@mixin border-inner {
+    border-top: 3px solid #aaa;
+    border-left: 3px solid #aaa;
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+}
+
+body {
+    width: 100%;
+    background-color: #ddd;
+    
+    font-family: sans-serif;
+}
+
+.game {
+    text-align: center;
+    .board-container {
+        display: inline-block;
+        margin-top: 50px;
+        padding: 15px;
+        background-color: #ddd;
+        @include border-outer;
+        .panel {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            margin-bottom: 15px;
+            div {
+                @include border-inner;
+                margin: 0 10px;
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+            .bombs, .timer {
+                text-align: center;
+                padding: 4px;
+                min-width: 80px;
+                h6 {
+                    margin: 0;
+                    font-size: 0.75rem;
+                    text-transform: uppercase;
+                }
+                h2 {
+                    margin: 0;
+                    font-size: 1.5rem;
+                    line-height: 21px;
+                }
+            }
+            .head {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                i {
+                    display: block;
+                    padding: 3px;
+                    @include border-outer;
+                }
+            }
+        }
+        .board {
+            display: inline-flex;
+            flex-wrap: nowrap;
+            margin: 0 auto;
+            @include border-inner;
+            .row {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: column;
+                .field {
+                    width: 25px;
+                    height: 25px;
+                    box-sizing: border-box;
+
+                    @include border-outer;
+                    user-select: none;
+
+                    text-align: center;
+                    line-height: 20px;
+                    font-weight: bold;
+                    &.visible {
+                        border: 1px solid #aaa;
+                        line-height: 23px;
+                    }
+                    &.bomb {
+                        background-color: red;
+                    }
+                    &.checking {
+                        background-color: royalblue;
+                    }
+                    &.question {
+                    }
+                    &.flag {
+                        color: red;
+                    }
+                }
+            }
+        }
+        .result {
+            display: none;
+            margin-top: 15px;
+            @include border-inner;
+            &.winner {
+                display: block;
+                background-color: limegreen;
+            }
+            &.looser {
+                display: block;
+                background-color: indianred;
+            }
+            h2 {
+                font-weight: normal;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+        }
+        .resize {
+            margin-top: 15px;
+            @include border-inner;
+            padding: 15px;
+            h5 {
+                margin: 0;
+                text-transform: uppercase;
+            }
+            .inputs {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+                margin-top: 15px;
+                input {
+                    width: 75px;
+                    margin: 0 5px;
+                    padding: 4px;
+                    text-transform: uppercase;
+                    font-size: 0.75rem;
+                    text-align: center;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+            button {
+                margin-top: 10px;
+                padding: 4px 10px;
+                text-transform: uppercase;
+                font-size: 0.75rem;
+                text-align: center;
+                @include border-outer;
+            }
+        }
+    }
+}

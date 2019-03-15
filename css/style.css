@@ -1,0 +1,172 @@
+body {
+  width: 100%;
+  background-color: #ddd;
+  font-family: sans-serif;
+}
+
+.game {
+  text-align: center;
+}
+.game .board-container {
+  display: inline-block;
+  margin-top: 50px;
+  padding: 15px;
+  background-color: #ddd;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #aaa;
+  border-bottom: 3px solid #aaa;
+}
+.game .board-container .panel {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.game .board-container .panel div {
+  border-top: 3px solid #aaa;
+  border-left: 3px solid #aaa;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  margin: 0 10px;
+}
+.game .board-container .panel div:first-child {
+  margin-left: 0;
+}
+.game .board-container .panel div:last-child {
+  margin-right: 0;
+}
+.game .board-container .panel .bombs, .game .board-container .panel .timer {
+  text-align: center;
+  padding: 4px;
+  min-width: 80px;
+}
+.game .board-container .panel .bombs h6, .game .board-container .panel .timer h6 {
+  margin: 0;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+.game .board-container .panel .bombs h2, .game .board-container .panel .timer h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 21px;
+}
+.game .board-container .panel .head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game .board-container .panel .head i {
+  display: block;
+  padding: 3px;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #aaa;
+  border-bottom: 3px solid #aaa;
+}
+.game .board-container .board {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+  border-top: 3px solid #aaa;
+  border-left: 3px solid #aaa;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+.game .board-container .board .row {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+.game .board-container .board .row .field {
+  width: 25px;
+  height: 25px;
+  box-sizing: border-box;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #aaa;
+  border-bottom: 3px solid #aaa;
+  user-select: none;
+  text-align: center;
+  line-height: 20px;
+  font-weight: bold;
+}
+.game .board-container .board .row .field.visible {
+  border: 1px solid #aaa;
+  line-height: 23px;
+}
+.game .board-container .board .row .field.bomb {
+  background-color: red;
+}
+.game .board-container .board .row .field.checking {
+  background-color: royalblue;
+}
+.game .board-container .board .row .field.flag {
+  color: red;
+}
+.game .board-container .result {
+  display: none;
+  margin-top: 15px;
+  border-top: 3px solid #aaa;
+  border-left: 3px solid #aaa;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+.game .board-container .result.winner {
+  display: block;
+  background-color: limegreen;
+}
+.game .board-container .result.looser {
+  display: block;
+  background-color: indianred;
+}
+.game .board-container .result h2 {
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.game .board-container .resize {
+  margin-top: 15px;
+  border-top: 3px solid #aaa;
+  border-left: 3px solid #aaa;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  padding: 15px;
+}
+.game .board-container .resize h5 {
+  margin: 0;
+  text-transform: uppercase;
+}
+.game .board-container .resize .inputs {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-top: 15px;
+}
+.game .board-container .resize .inputs input {
+  width: 75px;
+  margin: 0 5px;
+  padding: 4px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  text-align: center;
+}
+.game .board-container .resize .inputs input:first-child {
+  margin-left: 0;
+}
+.game .board-container .resize .inputs input:last-child {
+  margin-right: 0;
+}
+.game .board-container .resize button {
+  margin-top: 10px;
+  padding: 4px 10px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  text-align: center;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #aaa;
+  border-bottom: 3px solid #aaa;
+}
+
+/*# sourceMappingURL=style.css.map */
